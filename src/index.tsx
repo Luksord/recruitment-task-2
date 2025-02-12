@@ -1,14 +1,15 @@
-import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
-import Home from "./Home";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import "./global.css";
 import { store } from "./store";
 
-const App = () => {
-  return (
-    <Provider store={store}>
-      <Home />
-    </Provider>
-  );
-};
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
+);
