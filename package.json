@@ -1,5 +1,5 @@
 {
-  "name": "recruitment-task",
+  "name": "recruitment-task-2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,7 +23,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
